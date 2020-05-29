@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".SelectGameActivity">
 
+    <Button
+        android:id="@+id/rhythmgamebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="159dp"
+        android:layout_marginBottom="160dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/molegamebtn"
+        app:layout_constraintEnd_toEndOf="@+id/molegamebtn"
+        app:layout_constraintStart_toStartOf="@+id/molegamebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/molegamebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="319dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/pillowgamebtn"
+        app:layout_constraintStart_toStartOf="@+id/pillowgamebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pillowgamebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginBottom="165dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
