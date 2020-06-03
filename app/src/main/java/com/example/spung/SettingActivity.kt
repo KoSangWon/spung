@@ -1,6 +1,7 @@
 package com.example.spung
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBar
@@ -22,7 +23,6 @@ class SettingActivity : AppCompatActivity() {
         supportActionBar?.setCustomView(R.layout.custom_action_bar_layout)
 
         val view = supportActionBar!!.customView
-
         val homeImageButton = view.findViewById<ImageButton>(R.id.ic_home)
         homeImageButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
