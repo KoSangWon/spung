@@ -10,32 +10,27 @@
         android:id="@+id/rhythmgamebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="159dp"
-        android:layout_marginBottom="160dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/molegamebtn"
-        app:layout_constraintEnd_toEndOf="@+id/molegamebtn"
-        app:layout_constraintStart_toStartOf="@+id/molegamebtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/molegamebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="319dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/pillowgamebtn"
-        app:layout_constraintStart_toStartOf="@+id/pillowgamebtn"
+        android:layout_marginTop="179dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pillowgamebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginLeft="135dp"
-        android:layout_marginBottom="165dp"
-        android:text="Button"
+        android:layout_marginBottom="204dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/molegamebtn" />
+
+    <Button
+        android:id="@+id/molegamebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginBottom="149dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pillowgamebtn"
+        app:layout_constraintStart_toStartOf="@+id/rhythmgamebtn"
+        app:layout_constraintTop_toTopOf="@+id/rhythmgamebtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
