@@ -15,6 +15,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
 class AnalysisDailyActivity : AppCompatActivity() {
+
     var day:Array<String> = arrayOf("(월)", "(화)", "(수)", "(목)", "(금)", "(토)", "(일)")
 
     override fun onCreate(savedInstanceState: Bundle?) {
