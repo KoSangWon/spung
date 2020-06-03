@@ -7,51 +7,47 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/maintitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="54dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/analysisbtn"
-        app:layout_constraintTop_toBottomOf="@+id/analysisbtn" />
+        android:layout_marginBottom="9dp"
+        android:text="S PUN G"
+        android:textSize="52sp"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="17dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginTop="170dp"
+        android:text="St'less' Punching Game"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/analysisbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="300dp"
-        android:text="Button"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/gamebtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 
     <Button
         android:id="@+id/gamebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="302dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:text="Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/analysisbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/analysisbtn" />
 
     <Button
         android:id="@+id/moodlightbtn"
@@ -62,7 +58,6 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="174dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/speakerbtn"
         app:layout_constraintStart_toStartOf="parent" />
@@ -71,19 +66,17 @@
         android:id="@+id/speakerbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
         app:layout_constraintBaseline_toBaselineOf="@+id/moodlightbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/moodlightbtn" />
 
     <Button
-        android:id="@+id/settingBtn"
+        android:id="@+id/settingbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="임의로 설정"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
