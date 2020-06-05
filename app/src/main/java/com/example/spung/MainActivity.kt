@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
     }
-//
-//    private fun hideBar() {
-//        supportActionBar?.hide()
-////        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-////        WindowManager.LayoutParams.FLAG_FULLSCREEN)
-//    }
+
+    private fun hideBar() {
+        supportActionBar?.hide()
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    }
 
     private fun init() {
         analysisbtn.setOnClickListener {
