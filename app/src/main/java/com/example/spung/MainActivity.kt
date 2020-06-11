@@ -8,9 +8,9 @@ import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
+//
 //    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R., menu)
+//        menuInflater.inflate(R.layout., menu)
 //        return true
 //    }
 
@@ -22,11 +22,13 @@ class MainActivity : AppCompatActivity() {
 //
 //    private fun hideBar() {
 //        supportActionBar?.hide()
-////        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-////        WindowManager.LayoutParams.FLAG_FULLSCREEN)
+//        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//        WindowManager.LayoutParams.FLAG_FULLSCREEN)
 //    }
 
     private fun init() {
+        supportActionBar?.hide()
+
         analysisbtn.setOnClickListener {
             var i = Intent(this, AnalysisDailyActivity::class.java)
             startActivity(i)

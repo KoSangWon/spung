@@ -25,8 +25,6 @@
         <activity android:name=".MoleGamePlayActivity" />
         <activity android:name=".MoleGameActivity" />
         <activity android:name=".SelectGameActivity" />
-        <activity android:name=".MonthlyActivity" />
-        <activity android:name=".DailyActivity" />
         <activity android:name=".ResetActivity" />
         <activity android:name=".LightActivity" />
         <activity android:name=".ProfileActivity" />
