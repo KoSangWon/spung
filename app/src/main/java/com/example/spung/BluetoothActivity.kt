@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import app.akexorcist.bluetotohspp.library.BluetoothSPP
 import app.akexorcist.bluetotohspp.library.BluetoothState
+import app.akexorcist.bluetotohspp.library.DeviceList
 import kotlinx.android.synthetic.main.activity_bluetooth.*
 
 class BluetoothActivity : AppCompatActivity() {
@@ -25,8 +26,9 @@ class BluetoothActivity : AppCompatActivity() {
         }
 
         bt.setOnDataReceivedListener { data, message ->
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
         }
+
         bt.setBluetoothConnectionListener(object:BluetoothSPP.BluetoothConnectionListener{
             override fun onDeviceDisconnected() {
                 Toast.makeText(applicationContext, "1", Toast.LENGTH_SHORT).show()
@@ -45,8 +47,8 @@ class BluetoothActivity : AppCompatActivity() {
                 bt.disconnect()
             }
             else{
-                var i = Intent(this, BluetoothClass.Device::class.java)
-                startActivityForResult(intent,BluetoothState.REQUEST_CONNECT_DEVICE)
+                var i = Intent(applicationContext, DeviceList::class.java)
+                startActivityForResult(i, BluetoothState.REQUEST_CONNECT_DEVICE)
             }
         }
     }
@@ -59,8 +61,7 @@ class BluetoothActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(!bt.isBluetoothEnabled){
-            var i = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-            startActivityForResult(i, BluetoothState.REQUEST_ENABLE_BT)
+            bt.enable()
         }
         else{
             if(!bt.isServiceAvailable){
@@ -73,21 +74,21 @@ class BluetoothActivity : AppCompatActivity() {
 
     fun setup(){
         btnSend.setOnClickListener {
-            bt.send("Text", true)
+            bt.send("1", true)
+            Toast.makeText(this,"0",Toast.LENGTH_SHORT).show()
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == BluetoothState.REQUEST_CONNECT_DEVICE){
-            if(requestCode == Activity.RESULT_OK)
+            if(resultCode == Activity.RESULT_OK)
                 bt.connect(data)
         }
         else if(requestCode == BluetoothState.REQUEST_ENABLE_BT){
-            if(requestCode == Activity.RESULT_OK){
+            if(resultCode == Activity.RESULT_OK){
+                Toast.makeText(this,"yes",Toast.LENGTH_SHORT).show()
                 bt.setupService()
-                bt.startService(BluetoothState.DEVICE_OTHER)
-                setup()
             }
             else{
                 Toast.makeText(this,"no",Toast.LENGTH_SHORT).show()
