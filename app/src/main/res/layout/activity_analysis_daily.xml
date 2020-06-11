@@ -9,13 +9,16 @@
 
     <Button
         android:id="@+id/morebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="84dp"
-        android:text="더 보기"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/moreinfo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineChart"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ir.farshid_roohi.linegraph.LineChart
         android:id="@+id/lineChart"
@@ -38,10 +41,12 @@
         android:id="@+id/timetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="44dp"
         android:layout_marginBottom="42dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lineChart"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

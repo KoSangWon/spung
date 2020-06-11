@@ -7,6 +7,26 @@
     android:background="#1c1c1c"
     tools:context=".SelectGameActivity">
 
+    <Button
+        android:id="@+id/rhythmgamebtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rhythm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pillowgamebtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/pillow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/molegamebtn" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -18,17 +38,6 @@
         app:layout_constraintStart_toStartOf="@+id/rhythmgamebtn"
         app:layout_constraintTop_toBottomOf="@+id/rhythmgamebtn" />
 
-    <Button
-        android:id="@+id/rhythmgamebtn"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/rhythm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -39,15 +48,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/molegamebtn" />
-
-    <Button
-        android:id="@+id/pillowgamebtn"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginBottom="56dp"
-        android:background="@drawable/pillow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/molegamebtn" />
 
 
     <Button
