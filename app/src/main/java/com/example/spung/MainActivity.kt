@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
         speakerbtn.setOnClickListener {
-            var i = Intent(this, BluetoothSpeakerActivity::class.java)
+            var i = Intent(this, BluetoothActivity::class.java)
             startActivity(i)
         }
         settingbtn.setOnClickListener {
