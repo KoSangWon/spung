@@ -17,14 +17,14 @@ class PillowGameActivity : AppCompatActivity() {
         init()
     }
     private fun init() {
-//        pillowstartbtn.setOnClickListener {
-//            var i = Intent(this, PillowGamePlayActivity::class.java)
-//            startActivity(i)
-//        }
-//        pillowrecordbtn.setOnClickListener {
-//            var i = Intent(this, PillowGameRecordActivity::class.java)
-//            startActivity(i)
-//        }
+        pillowstartbtn.setOnClickListener {
+            var i = Intent(this, PillowGamePlayActivity::class.java)
+            startActivity(i)
+        }
+        pillowrecordbtn.setOnClickListener {
+            var i = Intent(this, PillowGameRecordActivity::class.java)
+            startActivity(i)
+        }
     }
 
     private fun setActionBar(){
@@ -36,7 +36,7 @@ class PillowGameActivity : AppCompatActivity() {
         val homeImageButton = view.findViewById<ImageButton>(R.id.ic_home)
         homeImageButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
-            startActivity(homeIntent)
+            startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.question)

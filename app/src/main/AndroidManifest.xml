@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
-        <activity android:name=".BluetoothSpeakerConnectActivity"></activity>
+        <activity android:name=".SettingHelpActivity"></activity>
+        <activity android:name=".MoodLightHelpActivity" />
+        <activity android:name=".LightHelpActivity" />
+        <activity android:name=".BluetoothSpeakerHelpActivity" />
+        <activity android:name=".AnalysisMoreHelpActivity" />
+        <activity android:name=".AnalysisMonthlyHelpActivity" />
+        <activity android:name=".AnalysisDailyHelpActivity" />
+        <activity android:name=".SelectGameHelpActivity" />
+        <activity android:name=".BluetoothSpeakerConnectActivity" />
         <activity android:name=".BluetoothSpeakerActivity" />
         <activity android:name=".MoodLightActivity" />
         <activity android:name=".PillowGameRecordActivity" />
