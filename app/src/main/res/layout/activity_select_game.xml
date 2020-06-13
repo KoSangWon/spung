@@ -4,38 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1c1c1c"
     tools:context=".SelectGameActivity">
 
     <Button
         android:id="@+id/rhythmgamebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="159dp"
-        android:layout_marginBottom="160dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/molegamebtn"
-        app:layout_constraintEnd_toEndOf="@+id/molegamebtn"
-        app:layout_constraintStart_toStartOf="@+id/molegamebtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/molegamebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="319dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/pillowgamebtn"
-        app:layout_constraintStart_toStartOf="@+id/pillowgamebtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rhythm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pillowgamebtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/pillow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/molegamebtn" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginLeft="135dp"
-        android:layout_marginBottom="165dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="리듬게임"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/rhythmgamebtn"
+        app:layout_constraintStart_toStartOf="@+id/rhythmgamebtn"
+        app:layout_constraintTop_toBottomOf="@+id/rhythmgamebtn" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="두더지게임"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/molegamebtn" />
+
+
+    <Button
+        android:id="@+id/molegamebtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginBottom="149dp"
+        android:background="@drawable/mole"
+        app:layout_constraintBottom_toBottomOf="@+id/pillowgamebtn"
+        app:layout_constraintStart_toStartOf="@+id/rhythmgamebtn"
+        app:layout_constraintTop_toTopOf="@+id/rhythmgamebtn"
+        app:layout_constraintVertical_bias="0.459" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="베개싸움"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pillowgamebtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
