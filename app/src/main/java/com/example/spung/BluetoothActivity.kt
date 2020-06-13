@@ -1,18 +1,19 @@
 package com.example.spung
 
 import android.app.Activity
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothClass
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import app.akexorcist.bluetotohspp.library.BluetoothSPP
 import app.akexorcist.bluetotohspp.library.BluetoothState
 import app.akexorcist.bluetotohspp.library.DeviceList
 import kotlinx.android.synthetic.main.activity_bluetooth.*
 
-class BluetoothSpeakerConnectActivity : AppCompatActivity() {
-
-    lateinit var bt: BluetoothSPP
+class BluetoothActivity : AppCompatActivity() {
+    lateinit var bt:BluetoothSPP
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,18 +24,21 @@ class BluetoothSpeakerConnectActivity : AppCompatActivity() {
             Toast.makeText(this, "can't use bluetooth", Toast.LENGTH_SHORT).show()
             finish()
         }
+        bt.setOnDataReceivedListener { Data, message ->
+            Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+        }
 
-        bt.setBluetoothConnectionListener(object: BluetoothSPP.BluetoothConnectionListener{
+        bt.setBluetoothConnectionListener(object:BluetoothSPP.BluetoothConnectionListener{
             override fun onDeviceDisconnected() {
-                Toast.makeText(applicationContext, "블루투스가 연결에 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth is disconnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceConnected(name: String?, address: String?) {
-                Toast.makeText(applicationContext, "블루투스가 연결되었습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth is connected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceConnectionFailed() {
-                Toast.makeText(applicationContext, "블루투스가 연결이 해제되었습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth connection is failed", Toast.LENGTH_SHORT).show()
             }
         })
         btnConnect.setOnClickListener {
@@ -69,8 +73,10 @@ class BluetoothSpeakerConnectActivity : AppCompatActivity() {
 
     fun setup(){
         btnSend.setOnClickListener {
-            bt.send("1", true)
-            Toast.makeText(this,"0", Toast.LENGTH_SHORT).show()
+            bt.send("1",false)
+        }
+        btnSend2.setOnClickListener {
+            bt.send("0",false)
         }
     }
 
@@ -82,11 +88,11 @@ class BluetoothSpeakerConnectActivity : AppCompatActivity() {
         }
         else if(requestCode == BluetoothState.REQUEST_ENABLE_BT){
             if(resultCode == Activity.RESULT_OK){
-                Toast.makeText(this,"yes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"yes",Toast.LENGTH_SHORT).show()
                 bt.setupService()
             }
             else{
-                Toast.makeText(this,"no", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"no",Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
