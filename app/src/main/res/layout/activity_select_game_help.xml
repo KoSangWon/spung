@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1c1c"
+    tools:context=".SelectGameHelpActivity">
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="383dp"
+        android:layout_height="492dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/typo_stormb"
+        android:lineHeight="40dp"
+        android:text="\n📌 게임을 선택할 수 있는 화면입니다.\n\n\n📌 리듬 게임, 두더지 게임, 베개 싸움 버튼을 클릭하시면 각 게임으로 이동합니다."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,15 +24,15 @@ class LightActivity : AppCompatActivity() {
         val homeImageButton = view.findViewById<ImageButton>(R.id.ic_home)
         homeImageButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
-            startActivity(homeIntent)
+            startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.question)
         questionImageButton.setOnClickListener {
-            val questionIntent = Intent(this, MainActivity::class.java)
+            val questionIntent = Intent(this, LightHelpActivity::class.java)
             startActivity(questionIntent)
         }
 
-        title_text.text = "Light Setting"
+        title_text.text = "Light"
     }
 }
