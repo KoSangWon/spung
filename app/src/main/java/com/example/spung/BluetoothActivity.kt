@@ -24,22 +24,21 @@ class BluetoothActivity : AppCompatActivity() {
             Toast.makeText(this, "can't use bluetooth", Toast.LENGTH_SHORT).show()
             finish()
         }
-
-        bt.setOnDataReceivedListener { data, message ->
+        bt.setOnDataReceivedListener { Data, message ->
             Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
         }
 
         bt.setBluetoothConnectionListener(object:BluetoothSPP.BluetoothConnectionListener{
             override fun onDeviceDisconnected() {
-                Toast.makeText(applicationContext, "1", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth is disconnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceConnected(name: String?, address: String?) {
-                Toast.makeText(applicationContext, "2", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth is connected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceConnectionFailed() {
-                Toast.makeText(applicationContext, "3", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Bluetooth connection is failed", Toast.LENGTH_SHORT).show()
             }
         })
         btnConnect.setOnClickListener {
@@ -74,8 +73,10 @@ class BluetoothActivity : AppCompatActivity() {
 
     fun setup(){
         btnSend.setOnClickListener {
-            bt.send("1", true)
-            Toast.makeText(this,"0",Toast.LENGTH_SHORT).show()
+            bt.send("1",false)
+        }
+        btnSend2.setOnClickListener {
+            bt.send("0",false)
         }
     }
 
