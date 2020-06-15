@@ -7,10 +7,10 @@ import android.widget.ImageButton
 import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
-class AnalysisMonthlyHelpActivity : AppCompatActivity() {
+class AnalysisWeeklyHelpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_analysis_monthly_help)
+        setContentView(R.layout.activity_analysis_weekly_help)
         setActionBar()
     }
 

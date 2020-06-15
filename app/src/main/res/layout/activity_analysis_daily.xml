@@ -17,11 +17,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineChart"
+        app:layout_constraintTop_toBottomOf="@+id/lineChartDaily"
         app:layout_constraintVertical_bias="1.0" />
 
     <ir.farshid_roohi.linegraph.LineChart
-        android:id="@+id/lineChart"
+        android:id="@+id/lineChartDaily"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="157dp"
@@ -45,7 +45,7 @@
         android:layout_marginBottom="42dp"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/lineChart"
+        app:layout_constraintBottom_toTopOf="@+id/lineChartDaily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

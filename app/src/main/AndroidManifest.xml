@@ -17,15 +17,11 @@
         <activity android:name=".LightHelpActivity" />
         <activity android:name=".BluetoothSpeakerHelpActivity" />
         <activity android:name=".AnalysisMoreHelpActivity" />
-        <activity android:name=".AnalysisMonthlyHelpActivity" />
+        <activity android:name=".AnalysisWeeklyHelpActivity" />
         <activity android:name=".AnalysisDailyHelpActivity" />
         <activity android:name=".SelectGameHelpActivity" />
         <activity android:name=".BluetoothActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".BluetoothSpeakerConnectActivity" />
         <activity android:name=".BluetoothSpeakerActivity" />
@@ -37,7 +33,7 @@
         <activity android:name=".RhythmGameRecordActivity" />
         <activity android:name=".RhythmGameActivity" />
         <activity android:name=".AnalysisMoreActivity" />
-        <activity android:name=".AnalysisMonthlyActivity" />
+        <activity android:name=".AnalysisWeeklyActivity" />
         <activity android:name=".AnalysisDailyActivity" />
         <activity android:name=".MoleGameRecordActivity" />
         <activity android:name=".MoleGamePlayActivity" />
@@ -49,7 +45,11 @@
         <activity android:name=".SoundEffectActivity" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
