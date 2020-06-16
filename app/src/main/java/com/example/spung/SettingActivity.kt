@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_setting.*
@@ -53,6 +54,7 @@ class SettingActivity : AppCompatActivity() {
         }
 
         initBtn.setOnClickListener {
+            Toast.makeText(applicationContext, "Init Records", Toast.LENGTH_SHORT).show()
             //초기화 기능 구현
         }
     }

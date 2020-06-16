@@ -27,6 +27,12 @@ class RhythmGameActivity : AppCompatActivity() {
             var i = Intent(this, RhythmGameRecordActivity::class.java)
             startActivity(i)
         }
+
+        val values = arrayOf("Memories", "Rolling in the Deep", "This Love", "Sugar")
+        song_picker.minValue = 0
+        song_picker.maxValue = values.size - 1
+
+        song_picker.displayedValues = values
     }
 
     private fun setActionBar(){
