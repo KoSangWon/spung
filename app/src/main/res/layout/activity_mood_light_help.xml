@@ -9,13 +9,13 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="383dp"
-        android:layout_height="492dp"
+        android:layout_width="375dp"
+        android:layout_height="700dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="\n📌 전원 모양의 버튼을 클릭하면 블루투스 스피커를 ON/OFF 조작할 수 있습니다.\n\n\n📌 드래그를 하여 밝기를 조절할 수 있습니다.\n\n\n📌 키고자 하는 색을 클릭하여 LED 등을 제어할 수 있습니다."
+        android:text="\n📌 Click the power-shaped button to turn the mood light on/off.\n\n\n📌 You can drag to adjust the brightness.\n\n\n📌 You can control the LED lights by clicking the color you want to turn on."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

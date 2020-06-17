@@ -16,7 +16,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="\n📌 게임을 선택할 수 있는 화면입니다.\n\n\n📌 리듬 게임, 두더지 게임, 베개 싸움 버튼을 클릭하시면 각 게임으로 이동합니다."
+        android:text="\n📌 You can select a game from this screen.\n\n\n📌 Click the rhythm game, mole game, pillow fight button to move to each game."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

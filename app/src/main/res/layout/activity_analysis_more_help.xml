@@ -15,7 +15,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="\n📌 차트와 함께 일부 기록을 확인할 수 있습니다.\n\n\n📌 오른쪽 하단의 MORE INFO 버튼을 클릭하시면 더욱 많은 기록을 확인할 수 있습니다."
+        android:text="\n📌 You can check some records with the chart.\n\n\n📌 Click the MORE INFO button on the bottom right to see more records."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
