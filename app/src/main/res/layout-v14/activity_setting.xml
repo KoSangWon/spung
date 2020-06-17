@@ -14,40 +14,52 @@
         android:layout_weight="1"/>
     <Button
         android:id="@+id/profileBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:fontFamily="@font/lottebold"
+        android:textSize="30sp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="프로필" />
+        android:text="Profile" />
     <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
     <Button
         android:id="@+id/soundBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:fontFamily="@font/lottebold"
+        android:textSize="30sp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="효과음" />
+        android:text="Sound" />
     <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
     <Button
         android:id="@+id/lightBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:fontFamily="@font/lottebold"
+        android:textSize="30sp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="불빛" />
+        android:text="Light" />
     <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
     <Button
         android:id="@+id/initBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:fontFamily="@font/lottebold"
+        android:textSize="30sp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="초기화" />
+        android:text="Init" />
     <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

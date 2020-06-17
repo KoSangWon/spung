@@ -8,12 +8,47 @@
     tools:context=".LightActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="218dp"
-        android:text="sfafs"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/lottebold"
+        android:text="Sound Effect"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="244dp"
+        android:fontFamily="@font/lottebold"
+        android:text="Game Sound"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
