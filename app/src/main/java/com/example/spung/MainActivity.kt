@@ -19,12 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
     }
-//
-//    private fun hideBar() {
-//        supportActionBar?.hide()
-//        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//        WindowManager.LayoutParams.FLAG_FULLSCREEN)
-//    }
 
     private fun init() {
         supportActionBar?.hide()
@@ -42,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
         speakerbtn.setOnClickListener {
-            var i = Intent(this, BluetoothSpeakerActivity::class.java)
+            var i = Intent(this, BluetoothActivity::class.java)
             startActivity(i)
         }
         settingbtn.setOnClickListener {

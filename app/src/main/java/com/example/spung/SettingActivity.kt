@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_setting.*
@@ -26,12 +27,12 @@ class SettingActivity : AppCompatActivity() {
         val homeImageButton = view.findViewById<ImageButton>(R.id.ic_home)
         homeImageButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
-            startActivity(homeIntent)
+            startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.question)
         questionImageButton.setOnClickListener {
-            val questionIntent = Intent(this, MainActivity::class.java)
+            val questionIntent = Intent(this, SettingHelpActivity::class.java)
             startActivity(questionIntent)
         }
     }
@@ -53,6 +54,7 @@ class SettingActivity : AppCompatActivity() {
         }
 
         initBtn.setOnClickListener {
+            Toast.makeText(applicationContext, "Init Records", Toast.LENGTH_SHORT).show()
             //초기화 기능 구현
         }
     }
