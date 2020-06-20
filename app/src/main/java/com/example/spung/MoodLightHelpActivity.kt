@@ -26,6 +26,6 @@ class MoodLightHelpActivity : AppCompatActivity() {
             startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
-        title_text.text = "Bluetooth Speacker Help"
+        title_text.text = "Mood Light Help"
     }
 }

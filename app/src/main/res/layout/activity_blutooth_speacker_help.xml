@@ -15,7 +15,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="\n📌 전원 모양의 버튼을 클릭하면 블루투스 스피커를 ON/OFF 조작할 수 있습니다."
+        android:text="\n📌 Click the power-shaped button to operate the Bluetooth speaker on/off."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

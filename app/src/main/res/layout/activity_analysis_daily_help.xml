@@ -15,7 +15,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="\n📌 날짜마다 타격한 횟수를 차트로 보여줍니다.\n\n\n📌 오른쪽 하단의 MORE INFO 버튼을 클릭하시면 표로 확인할 수 있습니다."
+        android:text="\n📌 This chart is a number of hits per date.\n\n\n📌 Click the MORE INFO button on the bottom right to see the table."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

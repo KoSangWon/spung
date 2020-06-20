@@ -16,8 +16,8 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/typo_stormb"
         android:lineHeight="40dp"
-        android:text="📌 프로필 탭에서 개인 프로필을 설정할 수 있습니다.\n\n\n📌 효과음 탭에서 음량조절, 효과음 선택을 할 수 있습니다.
-        \n\n\n📌 불빛 탭에서 밝기 조절, 색깔 선택을 할 수 있습니다.\n\n\n📌 초기화 탭에서 모든 기록을 초기화 할 수 있습니다."
+        android:text="📌 You can set up your personal profile on the Profiles tab.\n\n\n📌 On the Sound Effectiveness tab, you can select Volume Control, Sound Effectiveness.
+        \n\n\n📌 You can adjust the brightness and select the color from the Lights tab.\n\n\n📌 You can initialize all records from the Initialization tab."
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
