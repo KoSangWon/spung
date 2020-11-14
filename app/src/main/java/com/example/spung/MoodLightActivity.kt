@@ -1,15 +1,19 @@
 package com.example.spung
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import app.akexorcist.bluetotohspp.library.BluetoothSPP
 import app.akexorcist.bluetotohspp.library.BluetoothState
 import app.akexorcist.bluetotohspp.library.DeviceList
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_bluetooth.*
 import kotlinx.android.synthetic.main.activity_bluetooth_speaker.*
 import kotlinx.android.synthetic.main.activity_mood_light.*
@@ -17,6 +21,7 @@ import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
 class MoodLightActivity : AppCompatActivity() {
     lateinit var bt: BluetoothSPP
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +32,12 @@ class MoodLightActivity : AppCompatActivity() {
 
     private fun init() {
         bt = BluetoothSPP(this)
+        sharedPreferences = getSharedPreferences("Shared", Context.MODE_PRIVATE);
+        var editor: SharedPreferences.Editor = sharedPreferences.edit()
+        var gson: Gson = Gson()
+        editor.putString("bt", gson.toJson(bt))
+        editor.apply()
+
         if(!bt.isBluetoothAvailable){
             Toast.makeText(this, "can't use bluetooth", Toast.LENGTH_SHORT).show()
             finish()
@@ -34,6 +45,8 @@ class MoodLightActivity : AppCompatActivity() {
 
         bt.setOnDataReceivedListener { Data, message ->
             Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+            Log.d("test", bt.toString())
+            Log.d("test", bt.isServiceAvailable().toString())
         }
 
         bt.setBluetoothConnectionListener(object:BluetoothSPP.BluetoothConnectionListener{
@@ -62,7 +75,6 @@ class MoodLightActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        bt.stopService()
     }
 
     override fun onStart() {
@@ -99,17 +111,17 @@ class MoodLightActivity : AppCompatActivity() {
 
     fun setup(){
         var blue = false
-//        redbtn.setOnClickListener {
-//
-//            bt.send("1",false)
-//        }
+        redbtn.setOnClickListener {
+            bt.send("1",false)
+        }
         bluebtn.setOnClickListener {
+            Log.d("test", bt.isServiceAvailable().toString())
             if(blue){
-                bt.send("0",false)
+                bt.send("0",true)
                 blue = false
             }
             else {
-                bt.send("1", false)
+                bt.send("1", true)
                 blue = true
             }
         }
