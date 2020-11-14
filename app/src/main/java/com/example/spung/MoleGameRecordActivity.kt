@@ -1,11 +1,18 @@
 package com.example.spung
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_mole_game_record.*
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 class MoleGameRecordActivity : AppCompatActivity() {
 
@@ -13,6 +20,27 @@ class MoleGameRecordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mole_game_record)
         setActionBar()
+
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl("http://localhost:5000")
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//
+//        var server = retrofit.create(RecordService::class.java)
+//
+//        button_get.setOnClickListener {
+//
+//            server.getRequest("records").enqueue(object:Callback<ResponseRecords>{
+//                override fun onFailure(call: Call<ResponseRecords>?, t: Throwable?) {
+//
+//                }
+//
+//                override fun onResponse(call: Call<ResponseRecords>?, response: Response<ResponseRecords>?) {
+//                    println(response?.body().toString())
+//                }
+//
+//            })
+//        }
     }
 
     private fun setActionBar(){
