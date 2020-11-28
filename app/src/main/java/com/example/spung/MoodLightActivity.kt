@@ -14,8 +14,6 @@ import app.akexorcist.bluetotohspp.library.BluetoothSPP
 import app.akexorcist.bluetotohspp.library.BluetoothState
 import app.akexorcist.bluetotohspp.library.DeviceList
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_bluetooth.*
-import kotlinx.android.synthetic.main.activity_bluetooth_speaker.*
 import kotlinx.android.synthetic.main.activity_mood_light.*
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
@@ -33,10 +31,10 @@ class MoodLightActivity : AppCompatActivity() {
     private fun init() {
         bt = BluetoothSPP(this)
         sharedPreferences = getSharedPreferences("Shared", Context.MODE_PRIVATE);
-        var editor: SharedPreferences.Editor = sharedPreferences.edit()
-        var gson: Gson = Gson()
-        editor.putString("bt", gson.toJson(bt))
-        editor.apply()
+//        var editor: SharedPreferences.Editor = sharedPreferences.edit()
+//        var gson = Gson()
+//        editor.putString("bt", gson.toJson(bt))
+//        editor.apply()
 
         if(!bt.isBluetoothAvailable){
             Toast.makeText(this, "can't use bluetooth", Toast.LENGTH_SHORT).show()
@@ -75,6 +73,7 @@ class MoodLightActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        bt.stopService()
     }
 
     override fun onStart() {
@@ -117,11 +116,13 @@ class MoodLightActivity : AppCompatActivity() {
         bluebtn.setOnClickListener {
             Log.d("test", bt.isServiceAvailable().toString())
             if(blue){
-                bt.send("0",true)
+                bt.send("4",true)
+                bluebtn.setBackgroundResource(R.drawable.ic_on)
                 blue = false
             }
             else {
-                bt.send("1", true)
+                bt.send("5", true)
+                bluebtn.setBackgroundResource(R.drawable.ic_off)
                 blue = true
             }
         }
