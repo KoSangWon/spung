@@ -23,7 +23,6 @@ import kotlin.random.Random
 
 class MoleGamePlayActivity : AppCompatActivity() {
     lateinit var bt: BluetoothSPP
-    lateinit var sharedPreferences: SharedPreferences
     var check = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
